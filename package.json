@@ -1,0 +1,19 @@
+{
+  "name": "enmeshed",
+  "version": "0.0.1",
+  "description": "A prototype surface for a distributed allegory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/notkrd/Enmeshed.git"
+  },
+  "author": "Kavi",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/notkrd/Enmeshed/issues"
+  },
+  "homepage": "https://github.com/notkrd/Enmeshed#readme"
+}
