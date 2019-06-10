@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "A prototype surface for a distributed allegory",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/notkrd/Enmeshed.git"
@@ -16,7 +13,22 @@
     "url": "https://github.com/notkrd/Enmeshed/issues"
   },
   "homepage": "https://github.com/notkrd/Enmeshed#readme",
+  "jshintConfig": {
+    "esversion": 6
+  },
+  "scripts": {
+    "lint": "jshint *.js",
+    "test": "mocha",
+    "styles": "lessc carvedout.less > static/surface.css",
+    "build": "npm run lint && npm run test && npm run styles"
+  },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.10.2",
+    "less": "^3.9.0",
+    "mocha": "^6.1.4"
   }
 }

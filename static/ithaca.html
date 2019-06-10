@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Systems of Distribution I: Ithaca</title>
+    <link rel="stylesheet" href="surface.css">
+  </head>
+  <body>
+    <h1 class="title">Systems of Distribution I: Ithaca</h1>
+    <h3 class="bordered">
+    <blockquote>So come now, tell me this,<br>
+        and speak out candidly—Whose slave are you?<br>
+        Whose orchard are you tending? And tell me<br>
+        the truth about this, too, so I understand—<br>
+        Is this place we’ve reached really Ithaca,<br>
+        as some man I just met on my way here<br>
+        told me.  </blockquote>
+        (HOMER trans. Ian Johnston, Odyssey Book 24)
+    <blockquote>And if you find her poor, Ithaca has not deceived you. <br>
+      Wise as you have become, with so much experience, <br>
+      you must already have understood what these Ithacas mean.</blockquote> 
+      (C.P. CAVAFY trans. EDMUND KEELEY, Ithaka)
+    <blockquote><em>Was there one point on which their views were equal and negative?</em> <br>
+        The influence of gaslight or electric light on the growth of adjoining paraheliotropic trees.</blockquote> 
+        (JAMES JOYCE, Ulysses - Ch. 17: Ithaca)</h3>
+
+    <form action="">
+      <button>Send</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            var socket = io();
+            $('form').submit((e) => {
+                e.preventDefault();
+                socket.emit('a messenger', $('#m').val());
+                $('#m').val('');
+                return false;
+            });
+            socket.on('a messenger', (msg) => {
+                $('#messages').append($('<li>').text(msg));
+            });
+        });
+    </script>
+  </body>
+</html>
