@@ -20,7 +20,8 @@
     "lint": "jshint *.js",
     "test": "mocha",
     "styles": "lessc carvedout.less > static/surface.css",
-    "build": "npm run lint && npm run test && npm run styles"
+    "build": "npm run lint && npm run test && npm run styles",
+    "buildrun": "npm run build && npm run app"
   },
   "dependencies": {
     "express": "^4.17.1",
