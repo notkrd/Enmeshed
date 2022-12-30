@@ -30,6 +30,6 @@
   "devDependencies": {
     "jshint": "^2.10.2",
     "less": "^3.9.0",
-    "mocha": "^6.1.4"
+    "mocha": "^10.2.0"
   }
 }
